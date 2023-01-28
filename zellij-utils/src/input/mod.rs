@@ -64,6 +64,9 @@ mod not_wasm {
         if raw_bytes == [8] {
             return Key::Ctrl('h');
         };
+        if raw_bytes == [10] {
+            return Key::Ctrl('j');
+        };
 
         match event.key {
             KeyCode::Char(c) => {
